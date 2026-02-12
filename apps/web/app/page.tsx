@@ -1,102 +1,117 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import CommandTabs from "./components/commandtabs";
+import Stack from "./components/stack";
+import FAQSection from "./components/faq-section";
+import TerminalIcon from "./components/icon/terminal-icon";
+import { Circle, Diamond } from "lucide-react";
 
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
 
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
+const cli = [
+            {
+              label: "Select Framework:",
+              options: [{ text: "Next.js (App Router)", circle: true }],
+            },
+            {
+              label: "Select Database:",
+              options: [
+          { text: "Neon", circle: true },
+          { text: "Neon with Prisma", circle: true },
+              ],
+            },
+            {
+              label: "Select Language:",
+              options: [{ text: "TypeScript" }],
+            },
+            {
+              label: "Select Authentication:",
+              options: [{ text: "BetterAuth" }],
+            },
+            {
+              label: "Select Auth Method:",
+              options: [{ text: "Email & Password" }],
+            },
+            {
+              label: "Select Payment Integration:",
+              options: [{ text: "Dodo Payments" }],
+            },
+            {
+              label: "Select Email Service:",
+              options: [{ text: "Resend" }],
+            },
+            {
+              label: "Select Add-ons:",
+              options: [{ text: "None" }],
+            },
+          ];
 
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <ThemeImage
-          className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
-          alt="Turborepo logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>apps/web/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <div className="z-1 flex flex-col gap-2 justify-center items-center py-30">
+        <p className="text-center text-neutral-200 leading-tighter text-5xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">The Foundation for your Web App</p>
+        <p className="text-neutral-500 text-center max-w-3xl text-base text-balance sm:text-lg">Authentication, database, payments, email, and everything else your app needs fully built and ready on day one. Start with a complete foundation, not a blank folder.</p>
+        <CommandTabs/>
+      </div>
+      <Stack/>
+      <Terminal/>
+      <FAQSection/>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://turborepo.com/docs?utm_source"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+
+      <footer className="w-full py-4 border-t mt-20 border-t-neutral-900">
+        <div className="max-w-6xl flex justify-between items-center mx-auto">
+            <p className="text-neutral-500 text-sm">
+              © {new Date().getFullYear()} BuiltStack. All rights reserved.
+            </p>
+            <p className="text-neutral-500 text-sm">Built by 
+              <a href="https://ayushtomar.in" target="_blank" rel="noopener noreferrer" className="ml-1 text-neutral-400">Ayush Tomar</a>.
+            </p>
         </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
-        </Button>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://turborepo.com?utm_source=create-turbo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turborepo.com →
-        </a>
       </footer>
+
     </div>
-  );
+  )
+}
+
+const Terminal = () => {
+  return (
+    <div className="mx-auto rounded-xl border border-neutral-900 bg-neutral-950/70 max-w-2xl my-24">
+      <div className="border-b border-neutral-900 p-2 flex items-center ">
+          <TerminalIcon color="#a1a1a1" size={18}/>
+          <span className="ml-2 text-neutral-400 font-mono text-sm">Terminal</span>
+      </div>
+      <div className="p-4">
+        <div className="bg-neutral-950/50 text-neutral-400 font-mono text-sm overflow-x-auto flex flex-col gap-4">
+          <p className="text-neutral-300">
+            npx builtstack@latest
+          </p>
+
+        {
+          cli.map((command, index) => (
+            <div key={index}>
+              <div className="text-neutral-300 flex items-center gap-2">
+                <Diamond color="#d4d4d4" size={10}/>
+                <p>
+                  {command.label}
+                </p>
+              </div>
+              <div className="ml-4 flex flex-col gap-2 mt-1 mb-1">
+                {
+                  command.options.map((option, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <Circle color="#a1a1a1" size={8}/>
+                      <span>{option.text}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          ))
+        }
+
+        <p>Generating your BuiltStack project...</p>
+        <p className="text-neutral-300">Your BuiltStack project is ready!</p>
+      </div>
+      </div>
+    </div>
+  )
 }
