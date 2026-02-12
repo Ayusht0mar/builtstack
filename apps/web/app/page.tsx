@@ -1,8 +1,7 @@
 import CommandTabs from "./components/commandtabs";
 import Stack from "./components/stack";
 import FAQSection from "./components/faq-section";
-import TerminalIcon from "./components/icon/terminal-icon";
-import { Circle, Diamond } from "lucide-react";
+import { Circle, Diamond, TerminalIcon } from "lucide-react";
 
 
 const cli = [
