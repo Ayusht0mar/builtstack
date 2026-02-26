@@ -124,7 +124,7 @@ const DocumentationSidebar = () => {
           <ul className="space-y-2">
             <li>
               <a
-                href="https://github.com/ayushtomar/builtstack"
+                href="https://github.com/Ayusht0mar/builtstack"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50 transition-colors"

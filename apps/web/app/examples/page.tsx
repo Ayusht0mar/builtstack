@@ -17,21 +17,21 @@ type Config = {
 // Define options data structure
 const OPTIONS = {
   frameworks: [
-    { id: 'nextjsapp', title: 'Next.js (app router)', description: 'React Framework', icon: '/logos/nextjs.svg' }
+    { id: 'njs', title: 'Next.js (app router)', description: 'React Framework', icon: '/logos/nextjs.svg' }
   ],
   languages: [
-    { id: 'typescript', title: 'TypeScript', description: 'Typed JavaScript', icon: '/logos/typescript.svg' },
-    { id: 'javascript', title: 'JavaScript', description: 'Dynamic JavaScript', icon: '/logos/javascript.svg' }
+    { id: 'ts', title: 'TypeScript', description: 'Typed JavaScript', icon: '/logos/typescript.svg' },
+    { id: 'js', title: 'JavaScript', description: 'Dynamic JavaScript', icon: '/logos/javascript.svg' }
   ],
   databases: [
-    { id: 'neonprisma', title: 'Neon with Prisma', description: 'Serverless Postgres with ORM', icon: '/logos/neon.svg'},
+    { id: 'np', title: 'Neon with Prisma', description: 'Serverless Postgres with ORM', icon: '/logos/neon.svg'},
     { id: 'neon', title: 'Neon', description: 'ORM for your database', icon: '/logos/prisma.svg' },
   ],
   auth: [
-    { id: 'betterauth', title: 'BetterAuth', description: 'Authentication for your app', icon: '/logos/better-auth.svg' },
+    { id: 'ba', title: 'BetterAuth', description: 'Authentication for your app', icon: '/logos/better-auth.svg' },
   ],
   authMethods: [
-    { id: 'emailpassword', title: 'Email and Password', description: 'Third-party authentication', icon: '/logos/oauth.svg' },
+    { id: 'ep', title: 'Email and Password', description: 'Third-party authentication', icon: '/logos/oauth.svg' },
     { id: 'oauth', title: 'OAuth', description: 'Email-based authentication', icon: '/logos/email.svg' },
   ],
   payments: [
@@ -86,11 +86,11 @@ const OptionSection = ({
 const ExamplesPage = () => {
   // Consolidate all state into a single object
   const [config, setConfig] = useState<Config>({
-    framework: 'nextjsapp',
-    database: 'neonprisma',
-    language: 'typescript',
-    auth: 'betterauth',
-    authMethod: 'emailpassword',
+    framework: 'njs',
+    database: 'np',
+    language: 'ts',
+    auth: 'ba',
+    authMethod: 'ep',
     payment: 'dodo',
     email: 'resend',
     addons: ''
