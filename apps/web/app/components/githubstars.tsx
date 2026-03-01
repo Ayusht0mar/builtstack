@@ -5,8 +5,8 @@ import { Github } from "lucide-react";
 
 const GitHubStars = () => {
     return (
-        <a href="https://github.com/Ayusht0mar/builtstack" className="flex justify-center items-center gap-2 border w-full rounded px-1.5 py-0.5 bg-neutral-900 border-neutral-800 cursor-pointer">
-            <Github color="#a1a1a1" size={14} />
+        <a href="https://github.com/Ayusht0mar/builtstack" className="flex justify-center items-center gap-2 border w-full rounded px-1.5 py-0.5 bg-neutral-200 dark:bg-neutral-900 border-neutral-300 dark:border-neutral-800 cursor-pointer">
+            <Github color="#737373" size={14} />
             <p className="text-sm text-neutral-500">Open Source on GitHub</p>
         </a>
     );

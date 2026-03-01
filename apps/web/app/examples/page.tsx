@@ -58,7 +58,7 @@ const OptionButton = ({
   <button 
     onClick={onClick} 
     className={`flex leading-none rounded transition-colors text-sm text-neutral-500 px-1.5 py-0.5 cursor-pointer ${
-      isSelected ? 'border w-full rounded  bg-neutral-900 border-neutral-800 ' : ''
+      isSelected ? 'border w-full rounded  bg-neutral-100 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 ' : ''
     }`}
   >
     <span className="text-sm">{title}</span>
@@ -123,9 +123,9 @@ const ExamplesPage = () => {
   return (
     <div className="max-w-6xl mx-auto h-[calc(100vh-52px)] overflow-hidden">
       <div className="flex item w-full gap-2">
-        <div className="border rounded-lg overflow-hidden border-neutral-800/70 w-full h-[calc(100vh-60px)] flex flex-col ">
+        <div className="border rounded-lg overflow-hidden border-neutral-200/70 dark:border-neutral-800/70 w-full h-[calc(100vh-60px)] flex flex-col ">
           <div className="flex justify-between items-center p-2 border-b border-neutral-800/70">
-            <p className="text-neutral-600 leading-none">{selectedExample}</p>
+            <p className="text-neutral-500 dark:text-neutral-600 leading-none">{selectedExample}</p>
             <a href={selectedExampleUrl} target="_blank" rel="noopener noreferrer" className="mr-2">
               <SquareArrowOutUpRight size={16} color="#525252"/>
             </a>

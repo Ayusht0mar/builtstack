@@ -22,7 +22,7 @@ const CommandTabs = () => {
     }   
 
     return ( 
-        <div className="border rounded-lg  border-neutral-900 bg-neutral-950/70 p-1.5 w-full max-w-md mt-4">
+        <div className="border rounded-lg border-neutral-100 dark:border-neutral-900 bg-neutral-200 dark:bg-neutral-950/70 p-1.5 w-full max-w-md mt-4">
             <div className="mx-0.5">
                 {commands.map((c) => (
                         <button
@@ -30,15 +30,15 @@ const CommandTabs = () => {
                             onClick={() => setActive(c.name)}
                             className={`px-0.5 mx-1 text-sm  ${
                             c.name === active
-                                ? 'border-b border-neutral-400 text-neutral-300'
-                                : 'text-neutral-500 hover:text-neutral-400'
+                                ? 'border-b border-neutral-600 dark:border-neutral-400 text-neutral-800 dark:text-neutral-300'
+                                : 'text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-400'
                             }`}
                         >
                             {c.name}
                         </button>
                     ))}
             </div>
-            <pre className="px-2.5 py-2 flex justify-between rounded-md border border-neutral-800/70 bg-neutral-900/20 text-neutral-400">
+            <pre className="px-2.5 py-2 flex justify-between rounded-md border border-neutral-200/70 dark:border-neutral-800/70  bg-neutral-100 dark:bg-neutral-900/20 text-neutral-600 dark:text-neutral-400">
             <code>{activeCommand}</code>
             <button
                 onClick={() => {

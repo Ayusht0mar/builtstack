@@ -95,11 +95,10 @@ const DocumentationSidebar = () => {
                         <Link
                           href={item.href}
                           prefetch={false}
-                          title={item.title}
                           className={`flex rounded transition-colors text-sm text-neutral-500 px-1.5 py-0.5 truncate ${
                             isActive
-                              ? 'border w-full rounded  bg-neutral-900 border-neutral-800'
-                              : 'hover:bg-neutral-800/50'
+                              ? 'border w-full rounded bg-neutral-200 dark:bg-neutral-900 border-neutral-300 dark:border-neutral-800'
+                              : 'hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50'
                           }`}
                         >
                           {item.title}
@@ -127,9 +126,9 @@ const DocumentationSidebar = () => {
                 href="https://github.com/Ayusht0mar/builtstack"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50 transition-colors"
+                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm  text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors"
               >
-                <Github color="#a1a1a1" size={14} />
+                <Github size={14} />
                 <p className='leading-relaxed'>
                   GitHub
                 </p>
@@ -139,9 +138,9 @@ const DocumentationSidebar = () => {
             <li>
               <Link
                 href="/examples"
-                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50 transition-colors"
+                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm  text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors"
               >
-                <CodeXml color="#a1a1a1" size={14} />
+                <CodeXml size={14} />
                 <p className='leading-relaxed'>
                   Examples
                 </p>
@@ -151,9 +150,9 @@ const DocumentationSidebar = () => {
             <li>
               <a
                 href="mailto:support@builtstack.dev"
-                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50 transition-colors"
+                className="flex items-center gap-2 px-1.5 py-0.5 rounded text-sm  text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors"
               >
-                <Mail color="#a1a1a1" size={14} />
+                <Mail size={14} />
                 <p className='leading-relaxed'>
                   Support
                 </p>

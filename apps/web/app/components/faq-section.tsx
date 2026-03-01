@@ -37,7 +37,7 @@ const FAQSection = () => {
         <section className="mt-24 px-4">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center">
-                    <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-100 sm:text-4xl">
+                    <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">
                         Frequently Asked Questions
                     </h2>
                     <p className="mt-3 text-sm text-neutral-500 sm:text-base max-w-2xl mx-auto text-balance">
@@ -52,10 +52,10 @@ const FAQSection = () => {
                             key={item.question}
                             type="button"
                             onClick={() => toggleItem(index)}
-                            className="w-full cursor-pointer text-left rounded-xl border border-neutral-900 bg-neutral-950/70 px-4 py-3 sm:px-5 sm:py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-900/70 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-600"
+                            className="w-full cursor-pointer text-left rounded-xl border border-neutral-200 dark:border-neutral-900 bg-neutral-50/70 dark:bg-neutral-950/70 px-4 py-3 sm:px-5 sm:py-4 transition-colors hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-100/70 dark:hover:bg-neutral-900/70 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-600"
                         >
                             <div className="flex items-center justify-between gap-4">
-                                <p className="text-sm font-medium text-neutral-100 sm:text-base">
+                                <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100 sm:text-base">
                                     {item.question}
                                 </p>
                                 <ChevronDown

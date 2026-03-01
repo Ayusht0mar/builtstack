@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <div>
       <div className="z-1 flex flex-col gap-2 justify-center items-center py-30">
-        <p className="text-center text-neutral-200 leading-tighter text-5xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">The Foundation for your Web App</p>
+        <p className="text-center text-neutral-800  dark:text-neutral-200 leading-tighter text-5xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">The Foundation for your Web App</p>
         <p className="text-neutral-500 text-center max-w-3xl text-base text-balance sm:text-lg">Authentication, database, payments, email, and everything else your app needs fully built and ready on day one. Start with a complete foundation, not a blank folder.</p>
         <CommandTabs/>
       </div>
@@ -73,22 +73,22 @@ export default function Home() {
 
 const Terminal = () => {
   return (
-    <div className="mx-auto rounded-xl border border-neutral-900 bg-neutral-950/70 max-w-2xl my-24">
+    <div className="mx-auto rounded-xl border border-neutral-200 dark:border-neutral-900 bg-neutral-50/70 dark:bg-neutral-950/70 hover:border-neutral-300 dark:hover:border-neutral-700 max-w-2xl my-24">
       <div className="border-b border-neutral-900 p-2 flex items-center ">
           <TerminalIcon color="#a1a1a1" size={18}/>
           <span className="ml-2 text-neutral-400 font-mono text-sm">Terminal</span>
       </div>
       <div className="p-4">
-        <div className="bg-neutral-950/50 text-neutral-400 font-mono text-sm overflow-x-auto flex flex-col gap-4">
-          <p className="text-neutral-300">
+        <div className="text-neutral-400 font-mono text-sm overflow-x-auto flex flex-col gap-4">
+          <p className="dark:text-neutral-300 text-neutral-700">
             npx builtstack@latest
           </p>
 
         {
           cli.map((command, index) => (
             <div key={index}>
-              <div className="text-neutral-300 flex items-center gap-2">
-                <Diamond color="#d4d4d4" size={10}/>
+              <div className="text-neutral-700 dark:text-neutral-300 flex items-center gap-2">
+                <Diamond size={10}/>
                 <p>
                   {command.label}
                 </p>
@@ -107,8 +107,8 @@ const Terminal = () => {
           ))
         }
 
-        <p>Generating your BuiltStack project...</p>
-        <p className="text-neutral-300">Your BuiltStack project is ready!</p>
+        <p className="text-neutral-800 dark:text-neutral-200">Generating your BuiltStack project...</p>
+        <p className="text-neutral-700 dark:text-neutral-300">Your BuiltStack project is ready!</p>
       </div>
       </div>
     </div>

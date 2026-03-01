@@ -83,9 +83,9 @@ const Stack = () => {
                             </div>
                             <div className="flex-col justify-center items-center gap-2  absolute  bottom-24 w-full rounded-md hidden group-hover:flex">
                                 {item.content.map((subitem) => (
-                                    <div key={subitem.title} className="flex justify-center items-center gap-2 border w-full rounded px-2 py-1 bg-neutral-900 border-neutral-800">
+                                    <div key={subitem.title} className="flex justify-center items-center gap-2 border w-full rounded px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
                                         <Image src={subitem.logo} alt={subitem.title} width={14} height={14} className="overflow-hidden"/>
-                                        <p className="text-sm text-neutral-400">{subitem.title}</p>
+                                        <p className="text-sm text-neutral-600 dark:text-neutral-400">{subitem.title}</p>
                                     </div>
                                 ))}
                             </div>
