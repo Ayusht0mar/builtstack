@@ -41,7 +41,7 @@ const OPTIONS = {
     { id: 'resend', title: 'Resend', description: 'Email delivery service', icon: '/logos/resend.svg' },
   ],
   addons: [
-    { id: 'analytics', title: 'Analytics', description: 'Analytics service', icon: '/logos/vercel-analytics.svg' }
+    { id: 'vanalytics', title: 'Vercel Analytics', description: 'Analytics service', icon: '/logos/vercel-analytics.svg' }
   ]
 };
 
